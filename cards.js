@@ -10,7 +10,7 @@ const allCards = [
 
 {
   q: "FINANSE I EKONOMIA (ZREDAGOWANE): Instrumenty pochodne najpopularniejsze przykłady",
-  a: "Np Kontrakty terminowe, opcje, swapy i kontrakty forward. Służą do zabezpieczania się przed ryzykiem (hedging) i spekulacji."
+  a: "Kontrakty terminowe, opcje, swapy i kontrakty forward. Służą do zabezpieczania się przed ryzykiem (hedging) i spekulacji."
 },
 
 {
@@ -20,7 +20,7 @@ const allCards = [
 
 {
   q: "FINANSE I EKONOMIA (ZREDAGOWANE): Rola (istota) rynku instrumentów pochodnych w gospodarce",
-  a: "Dla firm - Zabezpieczanie się przed niekorzystnymi zmianami kursów walut/cen surowców, dla inwestorów - zarządzanie ryzykiem lub zwiększenie zysków."
+  a: "Dla firm - zabezpieczanie się przed niekorzystnymi zmianami kursów walut/cen surowców, dla inwestorów - zarządzanie ryzykiem lub zwiększenie zysków."
 },
 
 {
@@ -45,7 +45,7 @@ const allCards = [
 
 {
   q: "FINANSE I EKONOMIA (ZREDAGOWANE): Czym jest rachunkowość zarządcza i czym są w niej inwestycje?",
-  a: "Rachunkowość zarządcza dostarcza informacji do podejmowania decyzji w firmie. Inwestycje to alokacja zasobów w celu osiągnięcia korzyści ekonomicznych i zwiększenia wartości przedsiębiorstwa."
+  a: "Rachunkowość zarządcza dostarcza informacji do podejmowania decyzji w firmie i pozwala ocenić opłacalność projektów inwestycyjnych. Inwestycje to alokacja zasobów w celu osiągnięcia korzyści ekonomicznych i zwiększenia wartości przedsiębiorstwa."
 },
 
 {
@@ -65,12 +65,12 @@ const allCards = [
 
 {
   q: "FINANSE I EKONOMIA (ZREDAGOWANE): Czym różnią się fundusze unijne od funduszy europejskich?",
-  a: "Fundusze unijne pochodzą bezpośrednio z budżetu UE na realizację celów polityki spójności. Fundusze europejskie to pojęcie szersze – nie tylko środki unijne, również fundusze z innych europejskich źródeł, np Szwajcarii (Szwajcarski Mechanizm Finansowy)."
+  a: "Fundusze unijne pochodzą bezpośrednio z budżetu UE na realizację celów polityki spójności. Fundusze europejskie to pojęcie szersze – nie tylko środki unijne, również fundusze z innych europejskich źródeł, np. Szwajcarii (Szwajcarskie Mechanizmy Finansowe)."
 },
 
 {
   q: "FINANSE I EKONOMIA (ZREDAGOWANE): Czym jest montaż finansowy i co najczęściej obejmuje?",
-  a: "Ustalenie struktury finansowania projektu unijnego – skąd i w jakich proporcjach pozyskamy środki (dofinansowanie UE, wkład własny, budżet państwa, środki prywatne). Zabezpiecza płynność finansową i jest wymogiem formalnym przy ubieganiu się o środki unijne."
+  a: "Ustalenie struktury finansowania projektu unijnego – skąd i w jakich proporcjach pozyskamy środki (dofinansowanie UE, wkład własny, budżet państwa, środki prywatne). Zapewnia skuteczne rozliczenie, zabezpiecza płynność finansową i jest wymogiem formalnym przy ubieganiu się o środki unijne."
 },
 
 /* =========================
@@ -107,33 +107,43 @@ const allCards = [
   a: "Stopy procentowej – wyższe stopy, droższy kredyt, mniej inwestycji i konsumpcji. Kursu walutowego – stopy wpływają na wartość złotego, a przez to na import i eksport. Majątkowy – rosnące ceny aktywów, większe wydatki gospodarstw. Kredytowy – dostępność kredytów. Oczekiwania inflacyjne – wiara w walkę z inflacją, mniejsza presja płacowa."
 },
 
+{
+  q: "POLITYKA PIENIĘŻNA I BANKI (ZREDAGOWANE): Czym jest polityka monetarna?",
+  a: "Działania banku centralnego mające na celu kontrolowanie podaży pieniądza i stóp procentowych."
+},
+
+{
+  q: "POLITYKA PIENIĘŻNA I BANKI (ZREDAGOWANE): Instrumenty polityki monetarnej na rynku pieniężnym",
+  a: "Stopy procentowe, operacje otwartego rynku, rezerwa obowiązkowa, operacje depozytowo-kredytowe."
+},
+
 /* =========================
    KURS WALUTOWY, STRATEGIE, BANKI (pkt 11–13)
    ========================= */
 
 {
-  q: "KURS WALUTOWY, STRATEGIE, BANKI (AI): Rola kursu walutowego w polityce pieniężnej",
-  a: "Wpływa na inflację, eksport, import i kondycję gospodarki. Słabszy złoty – droższy import, co może podbić inflację."
+  q: "KURS WALUTOWY, STRATEGIE, BANKI (ZREDAGOWANE): Rola kursu walutowego w polityce pieniężnej",
+  a: "Wartość naszej waluty względem innej, wpływa na inflację, eksport, import i kondycję gospodarki. Słabszy złoty to droższy import, co może podbić inflację."
 },
 
 {
-  q: "KURS WALUTOWY, STRATEGIE, BANKI (AI): Jaki kurs może wybrać bank centralny przy swobodnym przepływie kapitału?",
-  a: "Stały kurs – traci samodzielność w kształtowaniu stóp procentowych. Płynny kurs – może prowadzić własną politykę pieniężną (Polska: kurs płynny)."
+  q: "KURS WALUTOWY, STRATEGIE, BANKI (ZREDAGOWANE): Obecnie jaki kurs może wybrać bank centralny przy swobodnym przepływie kapitału?",
+  a: "Dwie opcje. Utrzymać stały kurs – traci samodzielność w kształtowaniu stóp procentowych. Obrać płynny kurs – może prowadzić własną politykę pieniężną (Polska: kurs płynny)."
 },
 
 {
-  q: "KURS WALUTOWY, STRATEGIE, BANKI (AI): Czym jest strategia polityki pieniężnej i jakie są jej rodzaje?",
-  a: "Sposób, w jaki bank centralny realizuje swoje cele (głównie stabilność cen). Rodzaje: bezpośredni cel inflacyjny (obowiązuje w Polsce), kontrola agregatów pieniężnych, strategia kursowa, strategia pełzającego kursu, strategia bez wyraźnego celu."
+  q: "KURS WALUTOWY, STRATEGIE, BANKI (ZREDAGOWANE): Czym jest strategia polityki pieniężnej i jakie są jej rodzaje?",
+  a: "Sposób, w jaki bank centralny realizuje swoje cele (głównie stabilność cen). Rodzaje: bezpośredni cel inflacyjny (obowiązuje w Polsce), kontrola agregatów pieniężnych, strategia kursowa, strategia pełzającego kursu"
 },
 
 {
-  q: "KURS WALUTOWY, STRATEGIE, BANKI (AI): Jak działają strategie polityki pieniężnej?",
-  a: "Cel inflacyjny – bank ogłasza cel i dostosowuje stopy procentowe. Agregaty pieniężne – wpływ na ilość pieniądza, rzadko stosowana (relacja pieniądz–inflacja nieprzewidywalna). Kursowa – stały kurs względem innej waluty. Pełzający kurs – kurs zmienia się powoli w ustalonym paśmie. Bez wyraźnego celu – elastyczna reakcja, mało efektywna."
+  q: "KURS WALUTOWY, STRATEGIE, BANKI (ZREDAGOWANE): Jak działają poszczególne strategie polityki pieniężnej?",
+  a: "Cel inflacyjny – bank ogłasza cel i dostosowuje stopy procentowe. Kontrola agregatów pieniężnych – wpływ na ilość pieniądza, rzadko stosowana (relacja pieniądz–inflacja nie zawsze przewidywalna). Kursowa – stały kurs względem innej waluty. Pełzający kurs – kurs zmienia się powoli w ustalonym paśmie."
 },
 
 {
-  q: "KURS WALUTOWY, STRATEGIE, BANKI (AI): Rola banków w gospodarce",
-  a: "Krwiobieg systemu finansowego: pośrednictwo finansowe (depozyty i kredyty), płynność w systemie płatniczym, finansowanie inwestycji, kreacja pieniądza, doradztwo i usługi dodatkowe (leasing, faktoring)."
+  q: "KURS WALUTOWY, STRATEGIE, BANKI (ZREDAGOWANE): Rola banków w gospodarce",
+  a: "Krwiobieg systemu finansowego, rola to pośrednictwo finansowe (depozyty i kredyty), zapewniają płynność w systemie płatniczym, finansują inwestycje, uczestniczą w kreacji pieniądza, świadczą usługi doradcze i dodatkowe (leasing, faktoring), dostosowują się do nowych technologii."
 },
 
 /* =========================
@@ -141,102 +151,110 @@ const allCards = [
    ========================= */
 
 {
-  q: "RYNKI FINANSOWE, STOPY PROCENTOWE (AI): Rodzaje rynków finansowych",
+  q: "RYNKI FINANSOWE, STOPY PROCENTOWE (ZREDAGOWANE): Rodzaje rynków finansowych",
   a: "Pieniężny, kapitałowy, walutowy, towarowy, instrumentów pochodnych, obligacji, hipoteczny."
 },
 
 {
-  q: "RYNKI FINANSOWE, STOPY PROCENTOWE (AI): Czym różnią się rynki: pieniężny, kapitałowy, walutowy i towarowy?",
-  a: "Pieniężny – instrumenty krótkoterminowe (do roku). Kapitałowy – długoterminowe (akcje, obligacje). Walutowy (Forex) – wymiana walut, 24h na dobę. Towarowy – surowce (ropa, złoto, zboża)."
+  q: "RYNKI FINANSOWE, STOPY PROCENTOWE (ZREDAGOWANE): Główna cecha rodzajów rynków finansowych",
+  a: "Pieniężny – do roku. Kapitałowy – długoterminowy. Walutowy – wymiana walut. Towarowy – surowce. Instrumentów pochodnych – zależność od innych aktywów. Obligacji – obrót obligacjami. Hipoteczny – nieruchomości."
 },
 
 {
-  q: "RYNKI FINANSOWE, STOPY PROCENTOWE (AI): Czynniki determinujące stopę procentową",
+  q: "RYNKI FINANSOWE, STOPY PROCENTOWE (ZREDAGOWANE): Czynniki determinujące stopę procentową",
   a: "Polityka monetarna banku centralnego, inflacja, stan gospodarki (ożywienie – podwyżki, recesja – obniżki), popyt na kredyt, ryzyko kredytowe, czynniki globalne, podaż pieniądza."
 },
 
 /* =========================
-   OBLIGACJE, AKCJE, GIEŁDA (pkt 18–27)
+   OBLIGACJE I PORTFEL INWESTYCYJNY (pkt 18, 27)
    ========================= */
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Rodzaje obligacji",
-  a: "Według emitenta: skarbowe, komunalne, korporacyjne. Według oprocentowania: stałoprocentowe, zmiennoprocentowe (np. WIBOR), indeksowane (np. do inflacji). Według zabezpieczenia: zabezpieczone, niezabezpieczone. Według wykupu: kuponowe (odsetki okresowo), zerokuponowe (z dyskontem, bez odsetek)."
+  q: "OBLIGACJE I PORTFEL INWESTYCYJNY (ZREDAGOWANE): Czym są obligacje",
+  a: "Obligacje to papiery wartościowe potwierdzające, że emitent (wydawca) pożyczył od inwestora pieniądze i zobowiązuje się je zwrócić z odsetkami."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Co wpływa na cenę obligacji?",
-  a: "Stopy procentowe (rosną – cena spada), inflacja, ryzyko kredytowe (wyższe – niższa cena), popyt i podaż, okres do wykupu (dłuższy – większa wrażliwość ceny)."
+  q: "OBLIGACJE I PORTFEL INWESTYCYJNY (ZREDAGOWANE): Rodzaje obligacji",
+  a: "Według emitenta (wydawcy): skarbowe, komunalne, korporacyjne. Według oprocentowania: stałoprocentowe, zmiennoprocentowe, indeksowane. Według zabezpieczenia: zabezpieczone, niezabezpieczone. Według wykupu: kuponowe, zerokuponowe."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Analiza fundamentalna – na czym polega i jakie ma etapy?",
-  a: "Sprawdza, czy cena akcji odzwierciedla rzeczywistą wartość spółki. Etapy: analiza makroekonomiczna, branżowa, finansowa spółki, sytuacyjna, wycena akcji (wartość wewnętrzna vs cena rynkowa)."
+  q: "OBLIGACJE I PORTFEL INWESTYCYJNY (ZREDAGOWANE): Co wpływa na cenę obligacji?",
+  a: "Stopy procentowe (rosną – cena obligacji spada), inflacja (zmniejsza realną wartość przyszłych odsetek), ryzyko kredytowe, popyt i podaż, okres do wykupu."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Zalety i wady analizy fundamentalnej",
-  a: "Zalety: pomaga wybierać solidne spółki do długoterminowych inwestycji. Wady: wymaga czasu i wiedzy, nie sprawdza się w krótkim terminie, trzeba regularnie aktualizować założenia."
+  q: "OBLIGACJE I PORTFEL INWESTYCYJNY (ZREDAGOWANE): Na czym polega zarządzanie portfelem inwestycyjnym?",
+  a: "Dobór aktywów w celu osiągnięcia zysku przy określonym poziomie ryzyka."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Efektywność informacyjna rynków finansowych",
-  a: "Ceny papierów wartościowych w pełni i natychmiast odzwierciedlają wszystkie dostępne informacje."
+  q: "OBLIGACJE I PORTFEL INWESTYCYJNY (ZREDAGOWANE): Strategie zarządzania portfelem inwestycji",
+  a: "Aktywne – decyzje zależne od rynku. Pasywne – odwzorowanie indeksu (ETF). Mieszane – połączenie obu. Alokacja aktywów – podział między klasy aktywów. Wybór zależy od celu, ryzyka i czasu inwestycji."
+},
+
+/* =========================
+   AKCJE I GIEŁDA (pkt 19, 22, 23, 25)
+   ========================= */
+
+{
+  q: "AKCJE I GIEŁDA (ZREDAGOWANE): Analiza fundamentalna – na czym polega i jakie ma etapy?",
+  a: "Sprawdza, czy cena akcji odzwierciedla rzeczywistą wartość spółki. Etapy: analiza makroekonomiczna, branżowa, finansowa spółki (ocena kondycji), sytuacyjna, wycena akcji (wartość wewnętrzna vs cena rynkowa)."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Poziomy efektywności rynku według Famy",
+  q: "AKCJE I GIEŁDA (ZREDAGOWANE): Zalety i wady analizy fundamentalnej",
+  a: "Zalety: pomaga wybierać solidne spółki do długoterminowych inwestycji. Wady: Trzeba regularnie aktualizować założenia bo rynek się zmienia."
+},
+
+{
+  q: "AKCJE I GIEŁDA (ZREDAGOWANE): Rola giełdy w finansowaniu firm",
+  a: "Pozyskanie kapitału przez emisję akcji, rozwój bez kredytu, płynność, wiarygodność i wycena firmy. Finansuje też startupy."
+},
+
+{
+  q: "AKCJE I GIEŁDA (ZREDAGOWANE): Czym są akcje uprzywilejowane i jakie dają prawa?",
+  a: "Akcje dające dodatkowe prawa: więcej głosów, wyższą dywidendę lub pierwszeństwo przy podziale majątku. Pomagają zachować kontrolę nad firmą przy pozyskaniu kapitału."
+},
+
+{
+  q: "AKCJE I GIEŁDA (ZREDAGOWANE): Zalety i wady akcji uprzywilejowanych",
+  a: "Zalety: rozwój firmy bez długu, większy wpływ lub bezpieczeństwo inwestorów. Wady: dywidendy nie obniżają podatku, emisja może być kosztowna."
+},
+
+{
+  q: "AKCJE I GIEŁDA (ZREDAGOWANE): Wartość wewnętrzna akcji a cena rynkowa",
+  a: "Wewnętrzna – teoretyczna wycena na podstawie finansów firmy. Rynkowa – rzeczywista cena na giełdzie (popyt, podaż, emocje). Cena powyżej wartości wewnętrznej – przewartościowanie, poniżej – niedowartościowanie."
+},
+
+/* =========================
+   EFEKTYWNOŚĆ RYNKU I KRYZYSY (pkt 20–21)
+   ========================= */
+
+{
+  q: "EFEKTYWNOŚĆ RYNKU I KRYZYSY (ZREDAGOWANE): Definicja efektywności informacyjnej rynków finansowych, główne założenia",
+  a: "Ceny papierów wartościowych w pełni i natychmiast odzwierciedlają wszystkie dostępne informacje. Założenia: każda nowa informacja od razu wpływa na ceny, inwestorzy mają równy dostęp do informacji."
+},
+
+{
+  q: "EFEKTYWNOŚĆ RYNKU I KRYZYSY (ZREDAGOWANE): Poziomy efektywności informacyjnej rynku według Famy",
   a: "Słaba – ceny uwzględniają dane historyczne. Średnia – wszystkie informacje publiczne. Silna – nawet informacje poufne."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Konsekwencje efektywności informacyjnej rynku",
-  a: "Trudno osiągnąć ponadprzeciętne zyski bez większego ryzyka. Skuteczność analizy technicznej i fundamentalnej jest ograniczona."
+  q: "EFEKTYWNOŚĆ RYNKU I KRYZYSY (ZREDAGOWANE): Konsekwencje efektywności informacyjnej rynku",
+  a: "Trudno osiągnąć ponadprzeciętne zyski bez większego ryzyka. Skuteczność analizy jest ograniczona."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Źródła kryzysów finansowych",
-  a: "Nadmierne zadłużenie, spekulacja (bańki spekulacyjne), brak regulacji i nadzoru, czynniki zewnętrzne (wojny, klęski, ceny surowców), polityka pieniężna, utrata zaufania i wycofanie kapitału."
+  q: "EFEKTYWNOŚĆ RYNKU I KRYZYSY (ZREDAGOWANE): Źródła kryzysów finansowych",
+  a: "Nadmierne zadłużenie, spekulacja (bańki), brak nadzoru, czynniki zewnętrzne (wojny, klęski, wahania cen surowców), polityka pieniężna, utrata zaufania i odpływ kapitału."
 },
 
 {
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Rola giełdy w finansowaniu przedsiębiorstwa",
-  a: "Pozyskanie kapitału przez emisję akcji (bez kredytu), większa wiarygodność i płynność, funkcja wyceny (kurs pokazuje, jak rynek postrzega wartość firmy). Obsługuje też startupy."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Akcje uprzywilejowane – jakie dają prawa?",
-  a: "Więcej głosów na walnym zgromadzeniu, wyższą dywidendę, pierwszeństwo przy podziale majątku w likwidacji. Cel: utrzymanie kontroli nad firmą przy pozyskaniu kapitału."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Zalety i wady akcji uprzywilejowanych",
-  a: "Zalety: firma rozwija się bez zadłużania, inwestorzy mają większe bezpieczeństwo lub wpływ. Wady: dywidendy nie są kosztem podatkowym, emisja może być kosztowna."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): NewConnect w finansowaniu startupów",
-  a: "Alternatywny rynek GPW – młode firmy pozyskują kapitał bez rygorystycznych wymogów głównego parkietu. Wyzwania: zmienność kursów i niska płynność."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Wartość wewnętrzna akcji a cena rynkowa",
-  a: "Wartość wewnętrzna – teoretyczna wycena oparta na analizie finansów firmy. Cena rynkowa – rzeczywista cena na giełdzie (popyt, podaż, emocje). Droższa niż wartość wewnętrzna – przewartościowanie, tańsza – niedowartościowanie."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Instrumenty polityki monetarnej na rynku pieniężnym",
-  a: "Stopy procentowe, operacje otwartego rynku, rezerwa obowiązkowa, operacje depozytowo-kredytowe (kredyt lombardowy, depozyt nocny)."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Jakie są stopy procentowe banku centralnego na rynku pieniężnym?",
-  a: "Referencyjna – koszt pieniądza w krótkim okresie. Lombardowa – maksymalny koszt kredytu od banku centralnego. Depozytowa – dolny próg dla stopy overnight."
-},
-
-{
-  q: "OBLIGACJE, AKCJE, GIEŁDA (AI): Strategie zarządzania portfelem inwestycji",
-  a: "Aktywne – decyzje pod sytuację rynkową (analiza, market timing). Pasywne – odwzorowanie indeksu (ETF), długi horyzont. Mieszane – np. core-satellite. Alokacji aktywów – podział między klasy aktywów (np. 60% akcje, 40% obligacje). Wybór zależy od celu, tolerancji ryzyka i czasu inwestycji."
+  q: "EFEKTYWNOŚĆ RYNKU I KRYZYSY (ZREDAGOWANE): Skutki kryzysów finansowych",
+  a: "Problemy z płynnością i wypłacalnością, panika i destabilizacja rynku."
 },
 
 /* =========================
