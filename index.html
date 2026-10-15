@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiszki - Sesja Poprawkowa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="card">
+    <div id="menu-container" class="menu">
+        <h2>Wybierz kategorie</h2>
+        <div class="menu-hint">Kliknij, aby zaznaczyć / odznaczyć</div>
+        <div class="cat-list" id="cat-list"></div>
+        <div class="menu-tools">
+            <button onclick="selectAllCats(true)">Zaznacz wszystkie</button>
+            <button onclick="selectAllCats(false)">Odznacz wszystkie</button>
+        </div>
+        <button class="btn-start" id="btn-start" onclick="startFromMenu()">Start</button>
+    </div>
+
+    <div id="quiz-container">
+        <div id="progress-bar"></div>
+        <div id="question"></div>
+        <textarea id="userAnswer" placeholder="Wpisz odpowiedź..."></textarea>
+
+        <div class="center-buttons" id="main-actions">
+            <button class="btn-check" onclick="handleShowAnswer()">Pokaż odpowiedź</button>
+            <button class="btn-skip" onclick="handleSkip()">Pomiń pytanie</button>
+            <button class="danger" onclick="finishEarly()">Koniec</button>
+        </div>
+
+        <div class="eval-buttons" id="eval-actions">
+            <button class="btn-green" onclick="handleNext(true)">Dobrze</button>
+            <button class="btn-red" onclick="handleNext(false)">Źle</button>
+        </div>
+
+        <div id="answer-box" class="answer"></div>
+    </div>
+
+    <div id="summary-container" class="summary">
+        <h2>Sesja przerwana</h2>
+        <div class="stats-box" id="final-stats"></div>
+
+        <button class="btn-resume" id="btn-resume-incomplete" onclick="retryIncomplete()">
+            Kontynuuj (Błędy + Niezrobione)
+        </button>
+        <button onclick="startFresh()">Zacznij od zera (wybrane kategorie)</button>
+        <button class="btn-menu" onclick="showMenu()">Zmień kategorie</button>
+    </div>
+</div>
+
+<script src="cards.js"></script>
+<script>
+/* Format w cards.js:  q: "KATEGORIA: treść pytania"
+   Prefiks (WIELKIE LITERY + dwukropek) jest wycinany i zapisywany jako cat.
+   Jeśli odpowiedź też zaczyna się od tej kategorii, jest ona również ucięta. */
+const CAT_RE = /^([A-ZĄĆĘŁŃÓŚŹŻ][A-ZĄĆĘŁŃÓŚŹŻ0-9 ,.\-–&\/()]*):\s*([\s\S]*)$/;
+const NO_CAT = "INNE";
+
+const MASTER_DATA = allCards.map(c => {
+    let cat = NO_CAT, q = c.q, a = c.a;
+    const m = CAT_RE.exec(c.q);
+    if (m) {
+        cat = m[1].trim();
+        q = m[2];
+        if (a.startsWith(cat + ":")) a = a.slice(cat.length + 1).trim();
+    }
+    return { q, a, cat };
+});
+
+const ALL_CATS = [...new Set(MASTER_DATA.map(c => c.cat))];
+
+let state = {
+    selected: [...ALL_CATS],
+    currentCards: [],
+    currentIndex: 0,
+    score: 0,
+    errors: [],
+    isFinished: false
+};
+
+function saveToStorage() {
+    try { localStorage.setItem("fiszki-state-v6", JSON.stringify(state)); } catch (e) {}
+}
+
+function loadFromStorage() {
+    let saved = null;
+    try { saved = localStorage.getItem("fiszki-state-v6"); } catch (e) {}
+    if (saved) {
+        state = JSON.parse(saved);
+        // zachowaj tylko kategorie, które nadal istnieją (np. po zmianie nazw)
+        state.selected = (state.selected || []).filter(c => ALL_CATS.includes(c));
+        if (!state.selected.length) state.selected = [...ALL_CATS];
+        if (!state.currentCards.length) showMenu();
+        else if (state.isFinished) showSummary();
+        else {
+            showScreen('quiz');
+            displayCard();
+        }
+    } else {
+        showMenu();
+    }
+}
+
+function startFresh() {
+    const pool = MASTER_DATA.filter(c => state.selected.includes(c.cat));
+    state.currentCards = pool.sort(() => Math.random() - 0.5);
+    resetState();
+}
+
+/* ===== Menu kategorii ===== */
+function showMenu() {
+    renderMenu();
+    showScreen('menu');
+}
+
+function renderMenu() {
+    const list = document.getElementById("cat-list");
+    list.innerHTML = "";
+    ALL_CATS.forEach(cat => {
+        const count = MASTER_DATA.filter(c => c.cat === cat).length;
+        const btn = document.createElement("button");
+        btn.className = "cat-btn" + (state.selected.includes(cat) ? " active" : "");
+        const label = document.createElement("span");
+        label.textContent = cat;
+        const badge = document.createElement("span");
+        badge.className = "cat-count";
+        badge.textContent = count;
+        btn.append(label, badge);
+        btn.onclick = () => toggleCat(cat);
+        list.appendChild(btn);
+    });
+    updateStartButton();
+}
+
+function toggleCat(cat) {
+    const i = state.selected.indexOf(cat);
+    if (i >= 0) state.selected.splice(i, 1);
+    else state.selected.push(cat);
+    renderMenu();
+}
+
+function selectAllCats(on) {
+    state.selected = on ? [...ALL_CATS] : [];
+    renderMenu();
+}
+
+function updateStartButton() {
+    const n = MASTER_DATA.filter(c => state.selected.includes(c.cat)).length;
+    const btn = document.getElementById("btn-start");
+    btn.disabled = n === 0;
+    btn.textContent = n === 0 ? "Wybierz kategorię" : `Start (${n} pytań)`;
+}
+
+function startFromMenu() {
+    startFresh();
+}
+
+function retryIncomplete() {
+    const remaining = state.currentCards.slice(state.currentIndex);
+    const incomplete = [...state.errors, ...remaining];
+
+    if (incomplete.length === 0) {
+        alert("Wszystko zrobione idealnie!");
+        return;
+    }
+
+    state.currentCards = incomplete;
+    resetState();
+}
+
+function resetState() {
+    state.currentIndex = 0;
+    state.score = 0;
+    state.errors = [];
+    state.isFinished = false;
+    saveToStorage();
+    showScreen('quiz');
+    displayCard();
+}
+
+function displayCard() {
+    if (state.currentIndex >= state.currentCards.length) {
+        finishEarly();
+        return;
+    }
+
+    document.getElementById("progress-bar").innerText =
+        `${state.currentCards[state.currentIndex].cat || ""} • Karta ${state.currentIndex + 1} / ${state.currentCards.length}`;
+
+    document.getElementById("question").innerText =
+        state.currentCards[state.currentIndex].q;
+
+    document.getElementById("userAnswer").value = "";
+    document.getElementById("answer-box").style.display = "none";
+    document.getElementById("eval-actions").style.display = "none";
+    document.getElementById("main-actions").style.display = "flex";
+}
+
+function handleShowAnswer() {
+    document.getElementById("answer-box").innerText =
+        "Poprawna odpowiedź: " + state.currentCards[state.currentIndex].a;
+
+    document.getElementById("answer-box").style.display = "block";
+    document.getElementById("eval-actions").style.display = "flex";
+    document.getElementById("main-actions").style.display = "none";
+}
+
+function handleNext(isCorrect) {
+    if (isCorrect) state.score++;
+    else state.errors.push(state.currentCards[state.currentIndex]);
+
+    state.currentIndex++;
+    saveToStorage();
+    displayCard();
+}
+
+/* 🔹 NOWA FUNKCJA: POMIŃ = POPRAWNA ODPOWIEDŹ */
+function handleSkip() {
+    state.score++;
+    state.currentIndex++;
+    saveToStorage();
+    displayCard();
+}
+
+function finishEarly() {
+    state.isFinished = true;
+    saveToStorage();
+    showSummary();
+}
+
+function showSummary() {
+    showScreen('summary');
+
+    const remainingCount = state.currentCards.length - state.currentIndex;
+    const totalToRetry = state.errors.length + remainingCount;
+
+    document.getElementById("final-stats").innerHTML = `
+        ✅ Poprawne: <strong>${state.score}</strong><br>
+        ❌ Błędne: <strong>${state.errors.length}</strong><br>
+        ⏳ Niezrobione: <strong>${remainingCount}</strong><br><br>
+        Do powtórki łącznie: <strong>${totalToRetry}</strong>
+    `;
+
+    document.getElementById("btn-resume-incomplete").style.display =
+        totalToRetry > 0 ? "block" : "none";
+}
+
+function showScreen(type) {
+    document.getElementById("menu-container").style.display =
+        type === 'menu' ? 'block' : 'none';
+
+    document.getElementById("quiz-container").style.display =
+        type === 'quiz' ? 'block' : 'none';
+
+    document.getElementById("summary-container").style.display =
+        type === 'summary' ? 'block' : 'none';
+}
+
+loadFromStorage();
+</script>
+</body>
+</html>
