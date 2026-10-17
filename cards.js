@@ -262,32 +262,37 @@ const allCards = [
    ========================= */
 
 {
-  q: "NADZÓR, UE, BANKI ŚWIATOWE (AI): Cel nadzoru nad rynkami finansowymi i zadania KNF",
-  a: "Cel: stabilność systemu finansowego, ochrona konsumentów, zapobieganie kryzysom. KNF: licencje, kontrola instytucji finansowych, przeciwdziałanie praniu pieniędzy, edukacja finansowa."
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Cel nadzoru nad rynkami finansowymi i zadania KNF",
+  a: "Cel: stabilność systemu finansowego, ochrona konsumentów, zapobieganie kryzysom. KNF (Komisja Nadzoru Finansowego): dawanie licencji, kontrola instytucji finansowych, edukacja finansowa."
 },
 
 {
-  q: "NADZÓR, UE, BANKI ŚWIATOWE (AI): Rodzaje nadzoru finansowego",
-  a: "Makroostrożnościowy (cały system, ryzyko systemowe), mikroostrożnościowy (pojedyncze podmioty), ochrona konsumenta (przejrzystość usług)."
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Rodzaje nadzoru finansowego",
+  a: "Makroostrożnościowy, mikroostrożnościowy, ochrona konsumenta."
 },
 
 {
-  q: "NADZÓR, UE, BANKI ŚWIATOWE (AI): Cele polityki finansowej Unii Europejskiej",
-  a: "Zrównoważony rozwój, zielona transformacja, cyfryzacja."
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Czym jest polityka finansowa UE",
+  a: "To sposób realizacji długofalowych celów – zrównoważony rozwój, zielona transformacja i cyfryzacja. Jest nie tylko rozdzielaniem funduszy, ale też wsparciem spójności gospodarczej."
 },
 
 {
-  q: "NADZÓR, UE, BANKI ŚWIATOWE (AI): Najważniejsze instrumenty polityki finansowej UE",
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Najważniejsze instrumenty polityki finansowej UE",
   a: "Zielony Ład i Fit for 55 (neutralność klimatyczna do 2050 r.), Next Generation EU (odbudowa po pandemii), Wieloletnie Ramy Finansowe 2021–2027, InvestEU, Fundusz Sprawiedliwej Transformacji, raportowanie niefinansowe (ESG)."
 },
 
 {
-  q: "NADZÓR, UE, BANKI ŚWIATOWE (AI): Światowy system bankowy – rodzaje banków",
-  a: "Centralny (Fed, EBC, NBP) – polityka monetarna. Komercyjne – depozyty, kredyty, płatności. Inwestycyjne – emisja papierów wartościowych, doradztwo przy fuzjach, instrumenty pochodne."
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Czym jest światowy system bankowy",
+  a: "Sieć instytucji, których główną rolą jest pośrednictwo finansowe i zapewnienie stabilności gospodarczej."
 },
 
 {
-  q: "NADZÓR, UE, BANKI ŚWIATOWE (AI): Instytucje międzynarodowe w systemie bankowym",
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Światowy system bankowy – rodzaje banków",
+  a: "Centralny (Fed, EBC, NBP) – polityka monetarna, stopy procentowe, płynność sektora bankowego. Komercyjne – depozyty, kredyty, płatności. Inwestycyjne – emisja papierów wartościowych, doradztwo przy fuzjach, instrumenty pochodne."
+},
+
+{
+  q: "NADZÓR, UE, BANKI ŚWIATOWE (ZREDAGOWANE): Instytucje międzynarodowe w systemie bankowym",
   a: "MFW – pomoc państwom w kryzysie. Bank Światowy – finansuje rozwój i walkę z ubóstwem. BIS – współpraca banków centralnych."
 },
 
@@ -296,28 +301,28 @@ const allCards = [
    ========================= */
 
 {
-  q: "BILANS PŁATNICZY, KURSY WALUT (AI): Mechanizmy równoważenia bilansu płatniczego",
-  a: "Bilans płatniczy – wszystkie transakcje kraju z zagranicą. Automatyczne: zmiany kursu walutowego, mechanizm cen i płac. Interwencyjne: polityka fiskalna, monetarna i handlowa, pomoc zewnętrzna (np. MFW)."
+  q: "BILANS PŁATNICZY, KURSY WALUT (ZREDAGOWANE): Definicja bilansu płatniczego i jego mechanizmy równoważenia",
+  a: "Bilans płatniczy – wszystkie transakcje kraju z zagranicą. Automatyczne: zmiany kursu walutowego (deficyt – waluta się osłabia, lepszy eksport). Interwencyjne: polityka fiskalna (zmiany podatków), monetarna (zmiany stóp %) i handlowa (cła)."
 },
 
 {
-  q: "BILANS PŁATNICZY, KURSY WALUT (AI): Przyczyny zadłużenia międzynarodowego",
-  a: "Niskie oszczędności krajowe, zła polityka fiskalna, pożyczki w walutach obcych, wysokie stopy procentowe za granicą, kryzysy i wahania cen surowców, pułapka zadłużenia."
+  q: "BILANS PŁATNICZY, KURSY WALUT (ZREDAGOWANE): Przyczyny zadłużenia międzynarodowego",
+  a: "Niskie oszczędności krajowe, zła polityka fiskalna, pożyczki w walutach obcych, wysokie stopy procentowe za granicą, kryzysy gospodarcze i wahania cen surowców, pułapka zadłużenia."
 },
 
 {
-  q: "BILANS PŁATNICZY, KURSY WALUT (AI): Czym jest obrót bezdewizowy i jakie ma formy?",
-  a: "Rozliczanie bez użycia walut obcych, przez wzajemne kompensaty. Formy: barter, umowy offsetowe, clearing. Pozwala uniknąć ryzyka walutowego i kosztów przewalutowania."
+  q: "BILANS PŁATNICZY, KURSY WALUT (ZREDAGOWANE): Czym jest obrót bezdewizowy i jakie ma formy?",
+  a: "Państwo rozlicza się bez użycia walut obcych. Formy: barter (towar za towar), umowy offsetowe, clearing. Pozwala uniknąć ryzyka walutowego i kosztów przewalutowania."
 },
 
 {
-  q: "BILANS PŁATNICZY, KURSY WALUT (AI): Zależność bilansu płatniczego od kursów walut",
-  a: "Deficyt – rośnie podaż krajowej waluty, spada jej wartość (deprecjacja). Nadwyżka – rośnie popyt na walutę, umacnia się (aprecjacja). Słaba waluta – tańszy eksport, droższy import."
+  q: "BILANS PŁATNICZY, KURSY WALUT (ZREDAGOWANE): Zależność bilansu płatniczego od kursów walut",
+  a: "Wpływają na siebie nawzajem – system naczyń połączonych. Deficyt – rośnie podaż krajowej waluty, spada jej wartość (deprecjacja). Nadwyżka – rośnie popyt na walutę, umacnia się (aprecjacja)."
 },
 
 {
-  q: "BILANS PŁATNICZY, KURSY WALUT (AI): Systemy kursów walutowych",
-  a: "Stały – utrzymywany przez bank centralny. Płynny – ustalany przez rynek (popyt i podaż). Mieszany (hybrydowy) – płynny, ale bank centralny czasem interweniuje."
+  q: "BILANS PŁATNICZY, KURSY WALUT (ZREDAGOWANE): Systemy kursów walutowych",
+  a: "Stały – utrzymuje go bank centralny, stabilny, ale mało elastyczny. Płynny – ustala go rynek (popyt i podaż), bardziej zmienny, ale dostosowuje się do sytuacji gospodarczej. Mieszany – płynny, ale bank centralny czasem interweniuje przy wahaniach."
 },
 
 /* =========================
@@ -325,52 +330,52 @@ const allCards = [
    ========================= */
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Podstawowe zasady rachunkowości",
-  a: "Kontynuacji działalności, memoriału, współmierności przychodów i kosztów, ostrożności, istotności, wiarygodności, periodyzacji, zakaz kompensaty."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Definicja rachunkowości",
+  a: "System do rejestrowania i analizy zdarzeń gospodarczych, dostarczając informacje o sytuacji finansowej firmy."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Co oznaczają zasady: memoriału, współmierności, ostrożności i zakaz kompensaty?",
-  a: "Memoriał – przychody i koszty w momencie wystąpienia. Współmierność – koszty w tym samym okresie co związane z nimi przychody. Ostrożność – ujmujemy wszystkie przewidywane koszty, przychody dopiero po uzyskaniu. Zakaz kompensaty – nie łączymy aktywów z pasywami ani przychodów z kosztami."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Podstawowe zasady rachunkowości i co oznaczają",
+  a: "Kontynuacja działalności – firma kontynuuje działalność. Memoriał – przychód/koszt od razu gdy wystąpi. Współmierność – koszt w okresie przychodu. Ostrożność – przychody po uzyskaniu. Istotność – pomijać drobne szczegóły. Wiarygodność – dane kompletne, rzetelne, prawdziwe. Periodyzacja – okresowość. Zakaz kompensaty – nie łączyć aktywów/pasywów."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Części składowe sprawozdania finansowego",
-  a: "Wprowadzenie, bilans, rachunek zysków i strat, informacja dodatkowa. Dla firm badanych przez biegłego rewidenta także rachunek przepływów pieniężnych i zestawienie zmian w kapitale własnym."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Sprawozdanie finansowe – definicja i termin sporządzenia (spółki z KRS)",
+  a: "Dokument pokazujący sytuację finansową i majątkową firmy, sporządzany na dzień zamknięcia ksiąg. Spółki z KRS – termin w ciągu 3 miesięcy od dnia bilansowego, zatwierdzenie w ciągu 6 miesięcy."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Terminy sprawozdania finansowego spółek z KRS",
-  a: "Sporządzenie – w ciągu 3 miesięcy od dnia bilansowego. Zatwierdzenie – w ciągu 6 miesięcy (najczęściej do 30 czerwca)."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Podstawowe części sprawozdania finansowego",
+  a: "Wprowadzenie (info o firmie, okresie sprawozdawczym, zasadach wyceny), bilans, rachunek zysków i strat, informację dodatkowa. Dla firm badanych przez biegłego rewidenta także rachunek przepływów pieniężnych i zestawienie zmian w kapitale własnym."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Czym jest bilans i jaka jest zasada równowagi bilansowej?",
-  a: "Majątek firmy oraz źródła jego finansowania na konkretny dzień. Suma aktywów = suma pasywów."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Bilans – definicja, równowaga bilansowa i zasady sporządzania?",
+  "Dokument pokazujący majątek firmy oraz źródła jego finansowania na konkretny dzień. Równowaga bilansowa – suma aktywów = suma pasywów. Zasady: ciągłości, istotności i wiarygodności."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Struktura i funkcje bilansu",
-  a: "Aktywa – majątek firmy (trwały i obrotowy). Pasywa – źródła finansowania (kapitał własny i zobowiązania). Funkcje: informacyjna, kontrolna, decyzyjna."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Struktura i funkcje bilansu",
+  a: "Aktywa – majątek firmy (trwały i obrotowy). Pasywa – źródła finansowania (kapitał własny i zobowiązania). Funkcje: informacyjna, kontrolna, decyzyjna. Współgra z innymi elementami sprawozdania."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Czym jest rachunek zysków i strat (RZiS)?",
-  a: "Wynik finansowy przedsiębiorstwa za dany okres – czy firma osiągnęła zysk czy stratę. Pozwala ocenić rentowność firmy."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Czym jest rachunek zysków i strat (RZiS)?",
+  a: "Wynik finansowy przedsiębiorstwa za dany okres – czy zysk czy strata, uwzględniając wszystkie przychody i koszty. Pozwala ocenić rentowność firmy."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Elementy i układy rachunku zysków i strat",
-  a: "Przychody ze sprzedaży, koszty działalności, wynik na sprzedaży, koszty i przychody operacyjne, wynik brutto (przed opodatkowaniem), wynik netto (po podatkach). Układy: kalkulacyjny (koszty według rodzaju) i porównawczy (według miejsc powstawania)."
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Elementy i układy rachunku zysków i strat",
+  a: "Przychody ze sprzedaży, koszty działalności, wynik na sprzedaży, koszty i przychody operacyjne, wynik brutto, wynik netto. Układy: porównawczy (rodzaj – np. materiały, płace), kalkulacyjny (funkcja – np. produkcja, sprzedaż)."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Czym jest rachunek przepływów pieniężnych (cash flow) i jak go dzielimy?",
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Czym jest rachunek przepływów pieniężnych (cash flow) i jak go dzielimy?",
   a: "Pokazuje rzeczywiste przepływy gotówki w firmie w danym okresie. Podział: działalność operacyjna, inwestycyjna, finansowa."
 },
 
 {
-  q: "RACHUNKOWOŚĆ (AI): Znaczenie rachunku przepływów pieniężnych",
+  q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Znaczenie rachunku przepływów pieniężnych",
   a: "Określa płynność finansową, pomaga ocenić zdolność do rozwoju i inwestycji, pokazuje czy zyski księgowe przekładają się na realne wpływy pieniężne."
 }
 
