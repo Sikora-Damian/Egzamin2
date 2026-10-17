@@ -351,7 +351,7 @@ const allCards = [
 
 {
   q: "RACHUNKOWOŚĆ (ZREDAGOWANE): Bilans – definicja, równowaga bilansowa i zasady sporządzania?",
-  "Dokument pokazujący majątek firmy oraz źródła jego finansowania na konkretny dzień. Równowaga bilansowa – suma aktywów = suma pasywów. Zasady: ciągłości, istotności i wiarygodności."
+  a: "Dokument pokazujący majątek firmy oraz źródła jego finansowania na konkretny dzień. Równowaga bilansowa – suma aktywów = suma pasywów. Zasady: ciągłości, istotności i wiarygodności."
 },
 
 {
